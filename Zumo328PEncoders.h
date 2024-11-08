@@ -4,27 +4,10 @@
 
 #include <stdint.h>
 
-/*! \brief ########This class is ported to work on the Zumo 328P (Arduino UNO).########## 
- * 
- * Reads counts from the encoders on the Zumo 32U4.
- * This class allows you to read counts from the encoders on the Zumo 32U4,
- * which lets you tell how much each motor has turned and in what direction.
- *
- * The encoders are monitored in the background using interrupts, so your code
- * can perform other tasks without missing encoder counts.
- *
- * To read the left encoder, this class uses an interrupt service routine (ISR)
- * for PCINT0_vect, so there will be a compile-time conflict with any other code
- * that defines a pin-change ISR.
- *
- * To read the right encoder, this class calls
- * [attachInterrupt()](http://arduino.cc/en/Reference/attachInterrupt), so there
- * will be a compile-time conflict with any other code that defines an ISR for
- * an external interrupt directly instead of using attachInterrupt(). */
+/*! \brief This class is ported to work on the Zumo 328P (Arduino UNO).*/
 
 class Zumo328PEncoders
 {
-
 public:
 
     /*! This function initializes the encoders if they have not been initialized
