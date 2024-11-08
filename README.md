@@ -33,3 +33,7 @@ On the Zumo 32U4 board, an XOR chip was used to reduce the required number of in
 1. Clone or download this repository.
 2. Place the `Zumo328PEncoders` folder in your Arduino `libraries` directory.
 3. Restart the Arduino IDE and include the library in your sketch.
+   
+## Developers
+- **Mutasem Bader** 
+- **Felix Fritz Biermann**
