@@ -11,7 +11,8 @@ This library is based on the encoder implementation from the Zumo 32U4 library a
 - **Left Encoder XORed Input**: Mapped to **Pin 2**.
 - **Right Encoder XORed Input**: Mapped to **Pin 3**.
 - **Note**: The use of I2C is no longer possible due to the use of external interrupts for reading encoder signals.
-  
+
+
 - **Left Encoder Input**: Mapped to **Pin 6**.
 - **Right Encoder Input**: Mapped to **Pin 12**.
 - **Note**:
