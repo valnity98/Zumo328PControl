@@ -10,13 +10,10 @@ This library is based on the encoder implementation from the Zumo 32U4 library a
 
 - **Left Encoder XORed Input**: Mapped to **Pin 2**.
 - **Right Encoder XORed Input**: Mapped to **Pin 3**.
-- **Note**: The use of I2C is no longer possible due to the use of external interrupts for reading encoder signals.
-  
----
-
 - **Left Encoder Input**: Mapped to **Pin 6**.
 - **Right Encoder Input**: Mapped to **Pin 12**.
 - **Note**:
+  - **Pin 2 and 3**The use of I2C is no longer possible due to the use of external interrupts for reading encoder signals.
   - **Pin 12**: Used for a user push button, so it can no longer be used for that purpose.
   - **Pin 6**: Connected to the buzzer via a jumper; the jumper must be removed to enable encoder functionality.
 
