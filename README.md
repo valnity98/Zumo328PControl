@@ -6,6 +6,16 @@
 
 This library is based on the encoder implementation from the Zumo 32U4 library and is adapted specifically for the Zumo Shield for Arduino, v1.2. It is designed to work with external encoders such as the [Magnetic Encoder Pair Kit for Micro Metal Gearmotors, 12 CPR, 2.7–18V](https://www.pololu.com/product/3081) from Pololu.
 
+### Pin Configuration Changes
+
+- **Left Encoder XORed Input**: Mapped to **Pin 2**.
+- **Right Encoder XORed Input**: Mapped to **Pin 3**.
+- **External Interrupts**: Both encoder signals are read using external interrupt sources for precise signal monitoring.
+
+### Implementation Details
+
+On the Zumo 32U4 board, an XOR chip was used to reduce the required number of interrupt pins. This has been addressed in this library through software-based solutions, allowing the same functionality using fewer hardware resources. We use `attachInterrupt()` instead of directly defining `ISR(INTx_vect)` to ensure compatibility with other code that also utilizes `attachInterrupt()`.
+
 ## Features
 
 - **Ported for ATmega328P**: Adapted specifically for use with the Arduino Uno and compatible boards.
