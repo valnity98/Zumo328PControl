@@ -33,6 +33,66 @@ On the Zumo 32U4 board, an XOR chip was used to reduce the required number of in
 1. Clone or download this repository.
 2. Place the `Zumo328PControl` folder in your Arduino `libraries` directory.
 3. Restart the Arduino IDE and include the library in your sketch.
+
+   # Encoder Frequency and Speed Calculation
+
+This guide explains how to calculate the frequency and speed of a system using encoders with a specified resolution.
+
+## 1. Frequency Calculation from Encoder Counts
+
+The encoder provides 12 counts per revolution (CPR) of the motor shaft when counting both edges of both channels. To compute the counts per revolution of the drive sprockets, you multiply the gearbox’s gear ratio by 12.
+
+For example, if 75:1 motors are used (with a more accurate gear ratio of 75.81:1), the encoder provides approximately:
+
+\[
+\text{CPR} = 75.81 \times 12 \approx 909.7
+\]
+
+To calculate the frequency of encoder counts per second, use the following formula:
+
+\[
+f_{enc} = \frac{\text{RPM} \times \text{CPR}}{60}
+\]
+
+Where:
+- `RPM` is the revolutions per minute of the motor.
+- `CPR` is the counts per revolution of the drive sprockets (909.7 in this case).
+- The division by 60 converts RPM to revolutions per second.
+
+### Example
+
+If the motor is running at 1000 RPM, the encoder count frequency would be:
+
+\[
+f_{enc} = \frac{1000 \times 909.7}{60} = 15161.67 \, \text{counts/s}
+\]
+
+## 2. Speed Calculation (Linear Speed)
+
+To calculate the linear speed of a robot or vehicle, you need to convert the number of rotations of the drive sprockets into linear motion. This can be done if you know the radius of the wheels.
+
+The formula to calculate the linear speed \( v \) is:
+
+\[
+v = 2 \pi r \times \frac{\text{RPM}}{60}
+\]
+
+Where:
+- `r` is the radius of the wheel.
+- `v` is the linear velocity of the robot in meters per second (m/s).
+
+### Example
+
+If the wheel has a radius of 0.05 meters and the motor is running at 1000 RPM, the linear velocity would be:
+
+\[
+v = 2 \pi (0.05) \times \frac{1000}{60} \approx 5.24 \, \text{m/s}
+\]
+
+## Conclusion
+
+By calculating the encoder frequency and converting it to linear speed, you can determine the performance and movement of your system based on the encoder's counts.
+
    
 ## Developers
 - **Mutasem Bader** 
