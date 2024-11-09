@@ -46,15 +46,9 @@ For example, if 75:1 motors are used (with a more accurate gear ratio of 75.81:1
 
 CPR = 75.81 * 12 ≈ 909.7
 
-sql
-Code kopieren
-
 To calculate the frequency of encoder counts per second, use the following formula:
 
 f_enc = (RPM * CPR) / 60
-
-sql
-Code kopieren
 
 Where:
 - `RPM` is the revolutions per minute of the motor.
@@ -67,9 +61,6 @@ For a motor running at 200 RPM, the encoder count frequency would be:
 
 f_enc = (200 * 909.7) / 60 ≈ 3032.33 counts/s
 
-vbnet
-Code kopieren
-
 ## 2. Speed Calculation (Linear Speed)
 
 To calculate the linear speed of the robot, you need to convert the number of rotations of the drive sprockets into linear motion. This can be done if you know the radius of the wheels.
@@ -77,9 +68,6 @@ To calculate the linear speed of the robot, you need to convert the number of ro
 The formula to calculate the linear speed (v) is:
 
 v = 2 * π * r * (RPM / 60)
-
-markdown
-Code kopieren
 
 Where:
 - `r` is the radius of the wheel.
@@ -93,20 +81,13 @@ For a motor running at 200 RPM, the linear velocity would be:
 
 v = 2 * π * 0.0195 * (200 / 60) ≈ 1.63 m/s
 
-arduino
-Code kopieren
-
 For a motor running at 400 RPM, the linear velocity would be:
 
 v = 2 * π * 0.0195 * (400 / 60) ≈ 3.27 m/s
 
-vbnet
-Code kopieren
-
 ## Conclusion
 
 By calculating the encoder frequency and converting it to linear speed, you can determine 
-
    
 ## Developers
 - **Mutasem Bader** 
