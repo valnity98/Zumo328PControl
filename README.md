@@ -1,10 +1,10 @@
 # Zumo328PControl Library
 
-**Zumo328PControl** is a library designed for reading and managing encoder counts on the Zumo robot using an ATmega328P microcontroller (such as an Arduino Uno). This library provides an efficient and reliable way to monitor the rotation of motors, enabling accurate tracking of movement and direction.
+**Zumo328PControl** is a library designed for reading and managing encoder counts and controlling the speed of the Zumo robot using the ATmega328P microcontroller (such as the Arduino Uno). This library provides an efficient and reliable way to monitor motor rotation, enabling accurate tracking of movement and direction.
 
 ## Background
 
-This library is based on the encoder implementation from the Zumo 32U4 library and is adapted specifically for the Zumo Shield for Arduino, v1.2. It is designed to work with external encoders such as the [Magnetic Encoder Pair Kit for Micro Metal Gearmotors, 12 CPR, 2.7–18V](https://www.pololu.com/product/3081) from Pololu.
+This encoder-based implementation is derived from the Zumo 32U4 library and specifically adapted for the Zumo Shield for Arduino v1.2. It is designed to work with external encoders such as the Magnetic Encoder Pair Kit for Micro Metal Gearmotors, 12 CPR, 2.7–18V from (https://www.pololu.com/product/3081) Pololu. The PID algorithm has been created to control motor direction and speed, improving line-following capabilities.
 
 ### Pin Configuration Changes
 
@@ -19,7 +19,7 @@ This library is based on the encoder implementation from the Zumo 32U4 library a
 
 ### Implementation Details
 
-On the Zumo 32U4 board, an XOR chip was used to reduce the required number of interrupt pins. This has been addressed in this library through software-based solutions, allowing the same functionality using fewer hardware resources. We use `attachInterrupt()` instead of directly defining `ISR(INTx_vect)` to ensure compatibility with other code that also utilizes `attachInterrupt()`.
+On the Zumo 32U4 board, an XOR chip was used to reduce the required number of interrupt pins for encoders. This has been addressed in this library through software-based solutions, allowing the same functionality using fewer hardware resources. We use `attachInterrupt()` instead of directly defining `ISR(INTx_vect)` to ensure compatibility with other code that also utilizes `attachInterrupt()`.
 
 ## Features
 
