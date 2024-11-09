@@ -65,8 +65,6 @@ f_enc = (200 * 909.7) / 60 ≈ 3032.33 counts/s
 
 To calculate the linear speed of the robot, you need to convert the number of rotations of the drive sprockets into linear motion. This can be done if you know the radius of the wheels.
 
-The formula to calculate the linear speed (v) is:
-
 v = 2 * π * r * (RPM / 60)
 
 Where:
@@ -85,10 +83,7 @@ For a motor running at 400 RPM, the linear velocity would be:
 
 v = 2 * π * 0.0195 * (400 / 60) ≈ 3.27 m/s
 
-## Conclusion
 
-By calculating the encoder frequency and converting it to linear speed, you can determine 
-   
 ## Developers
 - **Mutasem Bader** 
 - **Felix Fritz Biermann**
