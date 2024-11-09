@@ -7,3 +7,8 @@ getCountsAndResetLeft    KEYWORD2    Returns and resets counts from the left enc
 getCountsAndResetRight   KEYWORD2    Returns and resets counts from the right encoder
 checkErrorLeft      KEYWORD2    Checks for errors on the left encoder
 checkErrorRight     KEYWORD2    Checks for errors on the right encoder
+Zumo328PPID          KEYWORD1    Class for controlling the speed using a PID controller
+init                 KEYWORD2    Initializes the PID controller with an optional maxSpeed
+ControlSpeed         KEYWORD2    Controls the motor speeds based on PID calculations
+getLeftSpeed         KEYWORD2    Returns the calculated left motor speed
+getRightSpeed        KEYWORD2    Returns the calculated right motor speed
