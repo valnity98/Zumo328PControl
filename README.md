@@ -34,9 +34,9 @@ On the Zumo 32U4 board, an XOR chip was used to reduce the required number of in
 2. Place the `Zumo328PControl` folder in your Arduino `libraries` directory.
 3. Restart the Arduino IDE and include the library in your sketch.
 
-   # Encoder Frequency and Speed Calculation
+# Encoder Frequency and Speed Calculation for Zumo Robot
 
-This guide explains how to calculate the frequency and speed of a system using encoders with a specified resolution.
+This guide explains how to calculate the frequency and speed of a Zumo robot using encoders with a specified resolution.
 
 ## 1. Frequency Calculation from Encoder Counts
 
@@ -61,15 +61,15 @@ Where:
 
 ### Example
 
-If the motor is running at 1000 RPM, the encoder count frequency would be:
+For a motor running at 200 RPM, the encoder count frequency would be:
 
 \[
-f_{enc} = \frac{1000 \times 909.7}{60} = 15161.67 \, \text{counts/s}
+f_{enc} = \frac{200 \times 909.7}{60} \approx 3032.33 \, \text{counts/s}
 \]
 
 ## 2. Speed Calculation (Linear Speed)
 
-To calculate the linear speed of a robot or vehicle, you need to convert the number of rotations of the drive sprockets into linear motion. This can be done if you know the radius of the wheels.
+To calculate the linear speed of the robot, you need to convert the number of rotations of the drive sprockets into linear motion. This can be done if you know the radius of the wheels.
 
 The formula to calculate the linear speed \( v \) is:
 
@@ -83,15 +83,24 @@ Where:
 
 ### Example
 
-If the wheel has a radius of 0.05 meters and the motor is running at 1000 RPM, the linear velocity would be:
+The radius of the Zumo wheel is \( r = 0.039 \, \text{m} / 2 = 0.0195 \, \text{m} \).
+
+For a motor running at 200 RPM, the linear velocity would be:
 
 \[
-v = 2 \pi (0.05) \times \frac{1000}{60} \approx 5.24 \, \text{m/s}
+v = 2 \pi (0.0195) \times \frac{200}{60} \approx 1.63 \, \text{m/s}
+\]
+
+For a motor running at 400 RPM, the linear velocity would be:
+
+\[
+v = 2 \pi (0.0195) \times \frac{400}{60} \approx 3.27 \, \text{m/s}
 \]
 
 ## Conclusion
 
-By calculating the encoder frequency and converting it to linear speed, you can determine the performance and movement of your system based on the encoder's counts.
+By calculating the encoder frequency and converting it to linear speed, you can determine the performance and movement of the Zumo robot based on the encoder's counts.
+
 
    
 ## Developers
