@@ -26,7 +26,7 @@ static void leftISR() {
         }else{
             countLeft --;
         }
-
+    }
     lastLeftA = newLeftA;
 }
 
@@ -41,7 +41,7 @@ static void rightISR()
         }else{
             countRight --;
         }
-
+   }
     lastRightB = newRightB;
 }
 
