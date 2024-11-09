@@ -34,7 +34,7 @@ On the Zumo 32U4 board, an XOR chip was used to reduce the required number of in
 2. Place the `Zumo328PControl` folder in your Arduino `libraries` directory.
 3. Restart the Arduino IDE and include the library in your sketch.
 
-# Encoder Frequency and Speed Calculation for Zumo Robot
+## Encoder Frequency and Speed Calculation for Zumo Robot
 
 This guide explains how to calculate the frequency and speed of a Zumo robot using encoders with a specified resolution.
 
