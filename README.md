@@ -1,6 +1,6 @@
 # Zumo328P Library
 
-**Zumo328P** is a library designed for reading and managing encoder counts and controlling the speed of the Zumo robot using the ATmega328P microcontroller (such as the Arduino Uno). This library provides an efficient and reliable way to monitor motor rotation, enabling accurate tracking of movement and direction.
+**Zumo328P** is a library designed for reading and managing encoder counts and controlling the speed of the Zumo Shield for Arduino v1.2 using the ATmega328P microcontroller (such as the Arduino Uno). This library provides an efficient and reliable way to monitor motor rotation, enabling accurate tracking of movement and direction.
 
 ## Background
 
@@ -31,7 +31,8 @@ On the Zumo 32U4 board, an XOR chip was used to reduce the required number of in
 
 1. Clone or download this repository.
 2. Place the `Zumo328P` folder in your Arduino `libraries` directory.
-3. Restart the Arduino IDE and include the library in your sketch.
+3. Download dependencies such as FAST GPIO from Library Manager
+4. Restart the Arduino IDE and include the library in your sketch.
 
 ## Encoder Frequency and Speed Calculation for Zumo Robot
 
