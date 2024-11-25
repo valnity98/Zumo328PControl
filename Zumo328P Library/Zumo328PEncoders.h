@@ -29,9 +29,9 @@ public:
      * movement of the left side of the Zumo, while negative counts correspond
      * to backwards movement.
      *
-     * The count is returned as a signed 16-bit integer.  When the count goes
-     * over 32767, it will overflow down to -32768.  When the count goes below
-     * -32768, it will overflow up to 32767. */
+     * The count is returned as a signed 32-bit integer.  When the count goes
+     * over 2,147,483,647, it will overflow down to -2,147,483,648 .  When the count goes below
+     * -2,147,483,648 , it will overflow up to 2,147,483,647 . */
     static int32_t getCountsLeft();
 
     /*! This function is just like getCountsLeft() except it applies to the
