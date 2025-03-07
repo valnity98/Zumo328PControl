@@ -132,9 +132,8 @@ U = π * d = 2 * π * r
 - **Measured ticks = 5000**
   
 Wheel circumference: U = π * 1.95 = 6.13 cm
+
 s = (5000 / 1000) * 6.13 = 30.65 cm
-
-
 
 ## Developers
 - **Mutasem Bader** 
