@@ -128,13 +128,11 @@ U = π * d = 2 * π * r
 
 #### Example
 - **CPR = 1000**
-- **Wheel diameter = 3.25 cm** → Wheel circumference:
-
-U = π * 3.25 = 10.21 cm
-
+- **Wheel diameter = 1.95 cm**
 - **Measured ticks = 5000**
-
-s = (5000 / 1000) * 10.21 = 51.05 cm
+  
+Wheel circumference: U = π * 1.95 = 6.13 cm
+s = (5000 / 1000) * 6.13 = 30.65 cm
 
 
 
